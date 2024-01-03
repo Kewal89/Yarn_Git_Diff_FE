@@ -1,0 +1,88 @@
+.CodeContainer {
+  overflow: auto;
+}
+
+.ListItem {
+  padding-bottom: 1.5rem;
+}
+
+.FileNameWrapper {
+  display: flex;
+  cursor: pointer;
+  column-gap: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.FileNameWrapper img {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.FileNameWrapper.Expanded img {
+  transform: rotate(0deg);
+}
+
+.FileName {
+  color: #1C7CD6;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140.836%;
+  letter-spacing: 0.56px;
+  margin: 0;
+}
+
+.DifferenceContainer {
+  border-radius: 2px;
+  border: 1px solid #E7EBF1;
+  background: #FFF;
+}
+
+.HunkItem {
+  padding: 4px;
+}
+
+.HunkHeader {
+  color: #6D84B0;
+  font-family: "Courier New";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 4px 8px;
+  /* 133.333% */
+}
+
+.HunkLineContainer {}
+
+.HunkLineItem {
+  display: grid;
+  grid-template-columns: 37px 37px 1fr;
+}
+
+.LineNumber {
+  color: #6078A9;
+  text-align: right;
+  font-family: Courier New;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 0 4px;
+}
+
+.LineNumber.HeadLine {
+  background: #F8FBFF;
+}
+
+.LineContent {
+  color: #657B83;
+  font-family: "Courier New";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  white-space: pre;
+  padding-left: 7px;
+}

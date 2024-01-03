@@ -1,13 +1,105 @@
 .HeaderContainer {
   display: flex;
-  max-width: 1113px;
+  justify-content: space-between;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
-.LeftContainer{
-  
+.LeftContainer {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.ProfileSection img {
+  border-radius: 50%;
+}
+
+.InfoSection {
+  max-width: 589px;
+}
+
+.Message {
+  color: #2B3750;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  margin-bottom: 2px;
+}
+
+.Author,
+.CommitedBy {
+  display: flex;
+  column-gap: 4px;
+  color: var(--muted);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  margin-bottom: 1px;
+  white-space: pre;
+}
+
+.Author span {
+  color: #2B3750;
+  font-weight: 700;
+}
+
+.CommitedBy {
+  justify-content: flex-end;
+}
+
+.CommitedBy span {
+  color: #6D727C;
+  font-weight: 700;
+}
+
+.ExtraInfo {
+  color: #32405D;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.7px;
 }
 
 .RightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 4px;
+}
 
+.Commit,
+.Parent {
+  color: var(--muted);
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: 0.7px;
+}
+
+.Commit span {
+  font-family: "Courier New";
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: unset;
+}
+
+.Parent span {
+  font-family: "Courier New";
+  color: var(--link);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: unset;
 }

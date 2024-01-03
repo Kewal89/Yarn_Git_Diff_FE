@@ -3,13 +3,15 @@ import { makeAutoObservable } from "mobx"
 
 class AppStore {
 
-  data: any = []
+  userInfo: any = {}
+  commitInfo: any = []
 
   constructor() {
     makeAutoObservable(this)
   }
 
-  setData = (data: any) => (this.data = data)
+  setUserInfo = (userData: any) => (this.userInfo = userData)
+  setCommitInfo = (commitData: any) => (this.commitInfo = commitData)
 }
 
 export default new AppStore()
