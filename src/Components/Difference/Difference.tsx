@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react"
 import { observer } from "mobx-react"
-import AppStore from "../../Stores/AppStore"
-import styles from "./Difference.module.css"
-import { toJS } from "mobx"
+import { useEffect, useState } from "react"
 import Chevron from "../../assets/Chevron.svg"
+import styles from "./Difference.module.css"
 
-const CodeDiffComponent = ({ changes }: any) => {
+const Difference = observer(({ changes }: any) => {
   const [expandedFiles, setExpandedFiles] = useState<any>([])
 
   useEffect(() => {
@@ -28,7 +26,11 @@ const CodeDiffComponent = ({ changes }: any) => {
             const isExpanded = expandedFiles.includes(change.headFile.path)
             return (
               <div key={`CodeDiff_${index}`} className={styles.ListItem}>
-                <div className={`${styles.FileNameWrapper} ${isExpanded ? styles.Expanded : ""}`} onClick={() => toggleFile(change.headFile.path)}>
+                <div
+                  className={`${styles.FileNameWrapper} ${isExpanded ? styles.Expanded : ""}`} //
+                  onClick={() => toggleFile(change.headFile.path)}
+                  data-testid={`fileExpander-${change.headFile.path}`}
+                >
                   <img src={Chevron} alt="Expand" width={20} height={20} />
 
                   <h2 className={styles.FileName}>{change.headFile.path}</h2>
@@ -62,10 +64,6 @@ const CodeDiffComponent = ({ changes }: any) => {
       )}
     </div>
   )
-}
+})
 
-const Difference = () => {
-  return <CodeDiffComponent changes={toJS(AppStore.commitInfo)} />
-}
-
-export default observer(Difference)
+export default Difference
